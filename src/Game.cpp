@@ -1,6 +1,12 @@
 #include "SDL2/SDL.h"
+#include "mruby.h"
+#include "mruby/compile.h"
 
 int main(int, char**) {
+
+  mrb_state* mrb = mrb_open();
+  mrb_load_string(mrb, "puts \"Hello World\"");
+  mrb_close(mrb);
 
   SDL_Window* window = NULL;
 
