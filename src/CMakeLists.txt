@@ -4,8 +4,7 @@
 
 include(ExternalProject)
 
-set(MiniRPG_SRCS Game.cpp)
-
+file(GLOB MiniRPG_SRCS "*.cpp")
 add_executable(${PROJECT_NAME} ${MiniRPG_SRCS})
 
 # Add SDL dependent
